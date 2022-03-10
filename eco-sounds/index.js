@@ -19,7 +19,7 @@ function playAudio() {
   else {
     audio.currentTime = 0;
     audio.play();
-    play.style.backgroundImage = 'url("./assets/svg/pause.png")';
+    play.style.backgroundImage = 'url("./assets/svg/pause.svg")';
   }
 }
 

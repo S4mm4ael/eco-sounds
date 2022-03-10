@@ -19,6 +19,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  max-height: 100vh;
   min-width: 320px;
   background-color: #000;
   font-family: 'Signika Negative', sans-serif;
@@ -45,7 +46,7 @@ a:hover, a:active{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 280px;
+  min-height: 200px;
   height: calc(100vh - 200px) ;
   background-image: url(./assets/img/1.jpg);
   background-size: cover;
@@ -88,14 +89,25 @@ a:hover, a:active{
   align-items: center;
   background: #000;
   opacity: 0.7;
+  
 }
+
 .logo{
   height: 80px;
   width: 80px;
   filter: brightness(1000%);
 }
+
+.logo-container{
+  display: block;
+  max-height: 80px;
+  filter: brightness(1000%);
+}
 .nav{
+  display: flex;
   margin-left: auto;
+  min-height: 90px;
+  
 }
 .nav-list{
   display: flex;
@@ -115,7 +127,7 @@ a:hover, a:active{
   justify-content: space-between;
   flex-wrap: wrap;
   max-height: 100px;
-  padding: 20px;
+  padding-top: 5px;
 }
 .social-list{
   list-style: none;
@@ -147,23 +159,35 @@ a:hover, a:active{
   margin-left: 20px;
 }
 @media (max-width: 620px) {
+  .rss-logo{
+    height: 25px;
+  }
   .social-logo{
     height: 25px;
     width: 25px;
   }
   .footer-container{
-    height: 50px;
-    margin-top: -50px;
+    padding-top: 45px;
+    max-height: 50px;
   }
-  .button{
-    margin-top: -50px;
-    height: 50px;
-    width: 50px;
-  }
-  .header-container{
-    opacity: 1;
+  .main-container{
+    background-size: auto;
+    height: calc(100vh - 300px) ;
   }
   .credits{
     visibility: hidden;
+  }
+  .logo-container{
+    width: 100%;
+    text-align: center;
+  }
+  .nav-list{
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 820px) {
+  .header-container{
+    opacity: 1;
   }
 }
